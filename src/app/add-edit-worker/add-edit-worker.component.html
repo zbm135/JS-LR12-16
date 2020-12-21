@@ -1,0 +1,49 @@
+<div class="container">
+    <form [formGroup]='studForm' (ngSubmit)="(isNaN(id) ? onAdd() : onEdit(id))">
+        <h3>{{(!id) ? 'Добавить нового сотрудника' : 'Режим редактирования сотрудника'}}</h3>
+    
+        <label for="surname">Surname</label>
+        <div class="col-12">
+            <input type="text" class="form-control" formControlName="surname" placeholder="Фамилия">
+        </div>
+        <label for="name">Name</label>
+        <div class="col-12">
+            <input type="text" class="form-control" formControlName="name" placeholder="Имя">
+        </div>
+        <label for="middlename">Отчество</label>
+        <div class="col-12">
+            <input type="text" class="form-control" formControlName="middlename" placeholder="Отчество">
+        </div>
+        <label for="phone">Телефон</label>
+        <div class="col-12">
+            <input type="text" class="form-control" formControlName="phone" placeholder="Телефон">
+        </div>
+        <label for="email">Email</label>
+        <div class="col-12">
+            <input type="text" class="form-control" formControlName="email" placeholder="Email">
+        </div>
+        <label for="birth">Birth date</label>
+        <div class="col-12">
+            <input type="date" class="form-control" formControlName="birth" placeholder="Дата рождения">
+        </div>
+        <label for="departament">Departament (выберите из списка)</label>
+        <div class="col-12">
+            <select class="form-select" formControlName="departament">
+                <option selected></option>
+                <option value="Отдел продаж">Отдел продаж</option>
+                <option value="Отдел доставки">Отдел доставки</option>
+                <option value="Юридический отдел">Юридический отдел</option>
+                <option value="IT отдел">IT отдел</option>
+              </select>
+        </div>
+        <br>
+        <div class="col-12">
+            <button class="btn btn-secondary" [disabled] ="studForm.invalid">{{isNaN(id) ? 'Добавить' : 'Сохранить'}}</button> 
+        </div>
+    </form>
+    <br>
+    <button *ngIf="!isNaN(id)" (click)="onDelete(id)"  class="btn btn-danger"> Удалить </button>
+    </div>
+    
+    
+   

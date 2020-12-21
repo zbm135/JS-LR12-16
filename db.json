@@ -1,0 +1,54 @@
+{
+  "workers": [
+    {
+      "surname": "Кайзер",
+      "name": "Роман",
+      "middlename": "Игоревич",
+      "phone": "+79275557788",
+      "email": "mail@gmail.com",
+      "birth": "1973-09-01",
+      "departament": "IT отдел",
+      "id": 2
+    },
+    {
+      "surname": "Муравленко",
+      "name": "Игорь",
+      "middlename": "Витальевич",
+      "phone": "+74950075656",
+      "email": "igor@murka.ru",
+      "birth": "1990-09-05",
+      "departament": "Отдел доставки",
+      "id": 3
+    },
+    {
+      "surname": "Кайзер",
+      "name": "Роман",
+      "middlename": "Игоревич",
+      "phone": "+79275557788",
+      "email": "mail@gmail.com",
+      "birth": "1963-09-01",
+      "departament": "IT отдел",
+      "id": 4
+    },
+    {
+      "surname": "Путин",
+      "name": "Дмитрий",
+      "middlename": "Витальевич",
+      "phone": "+74950075656",
+      "email": "igor@murka.ru",
+      "birth": "1991-09-05",
+      "departament": "Отдел доставки",
+      "id": 5
+    },
+    {
+      "surname": "Путило",
+      "name": "Степан",
+      "middlename": "Дмитриевич",
+      "phone": "+79548569888",
+      "email": "putilo@bel.by",
+      "birth": "1998-05-19",
+      "departament": "Отдел продаж",
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  
+  <input type="text" class="form-control" placeholder="Отфильтровать список по имени и фамилии"
+  (input) = 'onFilterWorkersList()'
+  [(ngModel)]="searching.Name">
+
+
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scole="col">ID <button (click)="useSortingId()">⇅</button></th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Возраст <button (click)="useSortingAge()">⇅</button></th>
+            <th scope="col">Отдел</th>
+            <th scope="col" colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let worker of workers | workerFilter: searching">
+            <td>{{worker.id}}</td>
+            <td>{{worker.surname}}</td>
+            <td>{{worker.name}}</td>
+            <td>{{this.declOfNum(this.birthDateToAge(worker.birth), ['год', 'года', 'лет'])}}</td>
+            <td>{{worker.departament}}</td>
+            <td><button type="button" class="btn btn-secondary" [routerLink]="['/edit', worker.id]">&#9881;</button></td>
+            <td><button type="button" class="btn btn-danger" (click)="onDelete(worker.id)">&#10060;</button> </td>
+          </tr>
+        </tbody>
+      </table>
+    
+</div>
